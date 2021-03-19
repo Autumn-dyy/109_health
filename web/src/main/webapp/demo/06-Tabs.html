@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--第一步引入css vue.js index.js -->
+    <link rel="stylesheet" href="elementui/index.css">
+    <script src="elementui/vue.js"></script>
+    <script src="elementui/index.js"></script>
+</head>
+<body>
+<div id="app">
+
+    <el-tabs v-model="activeName2" type="card" @tab-click="handleClick">
+        <el-tab-pane label="用户管理" name="first">
+
+            xxxxx
+
+        </el-tab-pane>
+        <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
+        <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
+        <el-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</el-tab-pane>
+    </el-tabs>
+
+
+
+</div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                activeName2: 'second'
+            };
+        },
+        methods: {
+            handleClick(tab, event) {
+                console.log(tab, event);
+            }
+        }
+    })
+</script>
+</html>
